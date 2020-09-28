@@ -47,7 +47,7 @@ class CashDepositeViewM : ViewModel() {
 
                 override fun onError(e: Throwable) {
                     //pDialog?.hide()
-                    Log.e("onError--->","onError--")
+                    Log.e("onError--->",e.toString())
                     e.printStackTrace()
 
                 }

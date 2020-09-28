@@ -1,7 +1,9 @@
 package com.bankasia.cblabsmvvm.retrofit
 
 import com.bankasia.cblabsmvvm.Constrants_Variable
+import com.bankasia.cblabsmvvm.datamodel.AgentOnBoardingRequestStatusDataM
 import com.bankasia.cblabsmvvm.datamodel.CashDepositDataM
+import com.bankasia.cblabsmvvm.requestmodel.AgentOnBoardingRequestStatusRequestM
 import com.bankasia.cblabsmvvm.requestmodel.CashDepositRequestM
 import com.google.gson.GsonBuilder
 import io.reactivex.Single
@@ -13,7 +15,8 @@ import java.util.concurrent.TimeUnit
 
 class ApiService {
 
-    var baseurl = "http://192.168.43.18:47956/"
+    //var baseurl = "http://192.168.43.18:47956/CBL_ABS/"
+    var baseurl = "http://202.40.190.117:8082/AgentBanking/"
     //var baseurl = "https://raw.githubusercontent.com/"
     var okHttpClient: OkHttpClient? = OkHttpClient.Builder()
         .connectTimeout(Constrants_Variable.retrofit_connection_timeout_in_second, TimeUnit.SECONDS)
@@ -43,6 +46,12 @@ class ApiService {
             model.contactNumCCD,
             model.depositAmountCCD,
             model.remarksCCD
+        )
+    }
+
+    fun getAgentOnBoardingReqStatusService(model:AgentOnBoardingRequestStatusRequestM) : Single<List<AgentOnBoardingRequestStatusDataM>>{
+        return api.fetchOnBoardingReq(
+            model.reqCode
         )
     }
 }

@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDE8E7"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".view.AgentOnBoardingRequestStatusDetailsV">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="#F2352F"
+        app:titleTextColor="@android:color/white"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:subtitleTextColor="@android:color/white"
+        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtRegionAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtRegionAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Region"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivRegion"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtRegionAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtRegionAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtRegionAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtAreaAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtAreaAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="#F2352F"
+                            android:hint="Area"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivArea"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtAreaAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtAreaAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtAreaAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtTerritoryAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtTerritoryAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Territory"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivTerritory"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtTerritoryAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtTerritoryAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtTerritoryAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtDSTAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtDSTAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="DST"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivDST"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtDSTAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtDSTAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtDSTAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtDivisionAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtDivisionAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Division"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivDivision"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtDivisionAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtDivisionAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtDivisionAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtDistrictAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtDistrictAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:hint="District"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivDistrict"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtDistrictAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtDistrictAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtDistrictAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtThanaAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtThanaAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Thana"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivThana"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtThanaAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtThanaAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtThanaAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtRequestTypeAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtRequestTypeAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Request Type"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivRequestType"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtRequestTypeAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtRequestTypeAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtRequestTypeAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtOutletAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtOutletAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Outlet"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivOutlet"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtOutletAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtOutletAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtOutletAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtAgentTypeAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtAgentTypeAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Agent Type"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivAgentType"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtAgentTypeAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtAgentTypeAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtAgentTypeAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtAgentNameAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtAgentNameAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Agent Name"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtCompanyNameAOnBoLyt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtCompanyNameAOnBo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/black"
+                        android:backgroundTint="#F2352F"
+                        android:textColor="@android:color/black"
+                        android:hint="Company Name"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtBusinessTypeAOnBoLyt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtBusinessTypeAOnBo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/black"
+                        android:backgroundTint="#F2352F"
+                        android:textColor="@android:color/black"
+                        android:hint="Business Type"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtContactPersonNameAOnBoLyt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtContactPersonNameAOnBo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/black"
+                        android:backgroundTint="#F2352F"
+                        android:textColor="@android:color/black"
+                        android:hint="Contact Person Name"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtOutletNameAOnBoLyt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtOutletNameAOnBo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/black"
+                        android:backgroundTint="#F2352F"
+                        android:textColor="@android:color/black"
+                        android:hint="Outlet Name"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtOutletAddressAOnBoLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtOutletAddressAOnBo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/black"
+                    android:backgroundTint="#F2352F"
+                    android:textColor="@android:color/black"
+                    android:hint="Outlet Address"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtTagBranchAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtTagBranchAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Tag Branch"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivTagBranch"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtTagBranchAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtTagBranchAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtTagBranchAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtTradeLicenceNameInEngAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtTradeLicenceNameInEngAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Trade Licence Name in English"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtCibChargeAcNOAOnBoLyt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtCibChargeAcNOAOnBo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/black"
+                        android:backgroundTint="#F2352F"
+                        android:textColor="@android:color/black"
+                        android:hint="CIB Charge Account"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtPreferredCourierPointAOnBoLyt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtPreferredCourierPointAOnBo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/black"
+                        android:backgroundTint="#F2352F"
+                        android:textColor="@android:color/black"
+                        android:hint="Preferred Courier Point"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtCourierPointAddressAOnBoLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCourierPointAddressAOnBo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/black"
+                    android:backgroundTint="#F2352F"
+                    android:textColor="@android:color/black"
+                    android:hint="Courier Point Address"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtMobileAOnBoLyt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtMobileAOnBo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/black"
+                        android:inputType="phone"
+                        android:backgroundTint="#F2352F"
+                        android:textColor="@android:color/black"
+                        android:hint="Mobile"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtEmailAOnBoLyt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtEmailAOnBo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/black"
+                        android:inputType="textEmailAddress"
+                        android:backgroundTint="#F2352F"
+                        android:textColor="@android:color/black"
+                        android:hint="Email"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtDemographyAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtDemographyAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:hint="Demography"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivDemography"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtDemographyAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtDemographyAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtDemographyAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edtAgentCategoryAOnBoLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtAgentCategoryAOnBo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#F2352F"
+                            android:textColor="@android:color/black"
+                            android:hint="Agent Category"
+                            android:textColorHint="@android:color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ivAgentCategory"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_dropdown"
+                        app:layout_constraintTop_toTopOf="@+id/edtAgentCategoryAOnBoLyt"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtAgentCategoryAOnBoLyt"
+                        app:layout_constraintEnd_toEndOf="@+id/edtAgentCategoryAOnBoLyt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtRemarksAOnBoLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtRemarksAOnBo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/black"
+                    android:backgroundTint="#F2352F"
+                    android:textColor="@android:color/black"
+                    android:hint="Remarks"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="Documents"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginLeft="13dp"
+                android:textColor="@android:color/black"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginStart="25dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_marginStart="5dp"
+                                android:id="@+id/tvDocumentsName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload AOF"
+                                app:layout_constraintBottom_toTopOf="@+id/ivDocuments"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocuments"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocuments"
+                                android:layout_marginLeft="5dp" />
+
+                            <ImageView
+                                android:layout_marginBottom="50dp"
+                                android:id="@+id/ivDocuments"
+                                android:layout_width="200dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/doccument_placeholder"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvDocumentsName" />
+
+                            <Button
+                                android:id="@+id/btnChooseDoc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="120dp"
+                                android:layout_marginBottom="50dp"
+                                android:background="@drawable/bt_background_rounded_red"
+                                android:text="Choose File"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/ivDocuments"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocuments"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocuments" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_marginStart="5dp"
+                                android:id="@+id/edtDocNID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload NID"
+                                app:layout_constraintBottom_toTopOf="@+id/ivDocNID"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocNID"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocNID"
+                                android:layout_marginLeft="5dp" />
+
+                            <ImageView
+                                android:layout_marginBottom="50dp"
+                                android:id="@+id/ivDocNID"
+                                android:layout_width="200dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/doccument_placeholder"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/edtDocNID" />
+
+                            <Button
+                                android:id="@+id/btnChooseDocNID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="120dp"
+                                android:layout_marginBottom="50dp"
+                                android:background="@drawable/bt_background_rounded_red"
+                                android:text="Choose File"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/ivDocNID"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocNID"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocNID" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_marginStart="5dp"
+                                android:id="@+id/edtDocETIN"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload ETIN"
+                                app:layout_constraintBottom_toTopOf="@+id/ivDocETIN"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocETIN"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocETIN"
+                                android:layout_marginLeft="5dp" />
+
+                            <ImageView
+                                android:layout_marginBottom="50dp"
+                                android:id="@+id/ivDocETIN"
+                                android:layout_width="200dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/doccument_placeholder"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/edtDocETIN" />
+
+                            <Button
+                                android:id="@+id/btnChooseDocETIN"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="120dp"
+                                android:layout_marginBottom="50dp"
+                                android:background="@drawable/bt_background_rounded_red"
+                                android:text="Choose File"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/ivDocETIN"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocETIN"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocETIN" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_marginStart="5dp"
+                                android:id="@+id/tvDocNameCIB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload CIB Form"
+                                app:layout_constraintBottom_toTopOf="@+id/ivDocCIB"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocCIB"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocCIB"
+                                android:layout_marginLeft="5dp" />
+
+                            <ImageView
+                                android:layout_marginBottom="50dp"
+                                android:id="@+id/ivDocCIB"
+                                android:layout_width="200dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/doccument_placeholder"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvDocNameCIB" />
+
+                            <Button
+                                android:id="@+id/btnChooseDocCIB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="120dp"
+                                android:layout_marginBottom="50dp"
+                                android:background="@drawable/bt_background_rounded_red"
+                                android:text="Choose File"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/ivDocCIB"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocCIB"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocCIB" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_marginStart="5dp"
+                                android:id="@+id/edtDocTradeLicence"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload Trade Licence"
+                                app:layout_constraintBottom_toTopOf="@+id/ivDocTradeLicence"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocTradeLicence"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocTradeLicence"
+                                android:layout_marginLeft="5dp" />
+
+                            <ImageView
+                                android:layout_marginBottom="50dp"
+                                android:id="@+id/ivDocTradeLicence"
+                                android:layout_width="200dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/doccument_placeholder"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/edtDocTradeLicence" />
+
+                            <Button
+                                android:id="@+id/btnChooseDocTradeLicence"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="120dp"
+                                android:layout_marginBottom="50dp"
+                                android:background="@drawable/bt_background_rounded_red"
+                                android:text="Choose File"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/ivDocTradeLicence"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocTradeLicence"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocTradeLicence" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_marginStart="5dp"
+                                android:id="@+id/edtDocOtherDoc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload other Documents"
+                                app:layout_constraintBottom_toTopOf="@+id/ivDocOtherDoc"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocOtherDoc"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocOtherDoc"
+                                android:layout_marginLeft="5dp" />
+
+                            <ImageView
+                                android:layout_marginBottom="50dp"
+                                android:id="@+id/ivDocOtherDoc"
+                                android:layout_width="200dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/doccument_placeholder"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/edtDocOtherDoc" />
+
+                            <Button
+                                android:id="@+id/btnChooseDocOtherDoc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="120dp"
+                                android:layout_marginBottom="50dp"
+                                android:background="@drawable/bt_background_rounded_red"
+                                android:text="Choose File"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/ivDocOtherDoc"
+                                app:layout_constraintStart_toStartOf="@+id/ivDocOtherDoc"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocOtherDoc" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F13833"
+        android:layout_above="@+id/footer"/>
+    <LinearLayout
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnClearAOnBo"
+            android:text="Clear"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bt_background_rounded_green"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnCancelAOnBo"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bt_background_rounded_red"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnSubmitAOnBo"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bt_background_rounded_yellow"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>
