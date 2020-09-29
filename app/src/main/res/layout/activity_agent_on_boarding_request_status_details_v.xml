@@ -80,7 +80,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -895,25 +894,28 @@
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
                 <LinearLayout
-                    android:layout_marginStart="25dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="start|center"
+                    android:gravity="start|center"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp">
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_gravity="start|center"
+                        android:gravity="start|center"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:layout_marginTop="5dp">
 
@@ -1008,7 +1010,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="25dp"
                             android:layout_marginTop="5dp">
 
                             <TextView
@@ -1054,6 +1056,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:layout_gravity="start|center"
+                        android:gravity="start|center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
@@ -1061,7 +1065,6 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:layout_marginTop="5dp">
 
@@ -1156,7 +1159,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="25dp"
                             android:layout_marginTop="5dp">
 
                             <TextView
